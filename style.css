@@ -125,9 +125,8 @@ nav a {
   z-index: 10;
 }
 
-.slider-btn.left { right: 0; left: auto; } /* السهم الأيسر إلى اليمين */
-.slider-btn.right { left: 0; right: auto; } /* السهم الأيمن إلى اليسار */
-
+.slider-btn.left { left: 0; }
+.slider-btn.right { right: 0; }
 .slider-btn i { font-size: 14px; }
 
 /* ====== MAIN ====== */
@@ -165,10 +164,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-
-/* ====== قلب اتجاه الأسهم الزرقاء لمباريات اليوم ====== */
-#prev-day { right: 0; left: auto; }  /* السهم السابق على اليمين */
-#next-day { left: 0; right: auto; }  /* السهم التالي على اليسار */
 
 .arrow:disabled {
   background: #aaa;
@@ -307,6 +302,67 @@ body.dark .day-title {
   color: #ff9800;
 }
 
+/* ====== Modal الأخبار ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 15px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.modal h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.modal p {
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.modal a {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 /* ====== حجم البطاقة على الهاتف ====== */
 @media (max-width: 768px) {
   .match-card {
@@ -319,6 +375,7 @@ body.dark .day-title {
 
   .news-card {
     flex: 0 0 150px;
+    flex: 0 0 calc(33.33% - 8px);
   }
 
   nav {
