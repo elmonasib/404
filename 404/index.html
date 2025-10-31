@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مباريات الأسبوع</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>مباريات الأسبوع</h1>
+    <button id="dark-mode-toggle" class="dark-btn"><i class="fa fa-moon"></i></button>
+    <i class="fa fa-bars" id="menu-icon"></i>
+    <nav id="nav-links">
+      <a href="#">الرئيسية</a>
+      <a href="#">الفرق</a>
+      <a href="#">حول</a>
+    </nav>
+  </header>
+
+  <!-- ======= قسم الأخبار ======= -->
+  <section class="news-section">
+    <h3>أحدث الأخبار</h3>
+    <div class="news-slider-wrapper">
+      <button class="slider-btn left"><i class="fa fa-chevron-right"></i></button>
+      <div class="news-slider"></div>
+      <button class="slider-btn right"><i class="fa fa-chevron-left"></i></button>
+    </div>
+  </section>
+
+  <!-- نافذة الأخبار المنبثقة -->
+  <div id="news-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <img id="modal-image" src="" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <main>
+    <div class="date-picker">
+      <button id="prev-day" class="arrow"><i class="fa fa-chevron-right"></i></button>
+      <input type="date" id="match-date" />
+      <button id="next-day" class="arrow"><i class="fa fa-chevron-left"></i></button>
+    </div>
+
+    <div id="day-title" class="day-title"></div>
+
+    <div class="grid-matches"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 موقع مباريات الأسبوع</p>
+  </footer>
+</body>
+</html>
+
